@@ -79,7 +79,7 @@ import kotlinx.coroutines.delay
 import java.io.IOException
 import java.util.regex.Pattern
 
-
+//全写在一起，汗流浃背了吧
 open class MainActivity : ComponentActivity() {
    // private val p: Process = Runtime.getRuntime().exec("su")
     private lateinit var pm: PackageManager
@@ -90,7 +90,7 @@ open class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         pm = packageManager
 
-        // searching main activities labeled to be launchers of the apps
+
 
 
 
