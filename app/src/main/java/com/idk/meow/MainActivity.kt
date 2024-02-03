@@ -6,6 +6,7 @@ import android.content.pm.PackageManager
 import android.content.pm.ResolveInfo
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
@@ -523,12 +524,12 @@ open class MainActivity : ComponentActivity() {
             val errorStr = pu.errStr
             if (errorStr != null) {
 
-                //log.error("执行解压操作异常！$errorStr")
+               Toast.makeText(this,"异常:$errorStr",Toast.LENGTH_SHORT).show()
             }
         } catch (e: IOException) {
-            //log.error("执行解IO操作异常！$e")
+            Toast.makeText(this,"异常:$e",Toast.LENGTH_SHORT).show()
         } catch (e: InterruptedException) {
-            //log.error("执行解压打断异常！$e")
+            Toast.makeText(this,"异常:$e",Toast.LENGTH_SHORT).show()
         } finally {
             ps?.destroy()
         }
